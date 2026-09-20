@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A Little Surprise 💗</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SCREEN 1
+         INTRO
+    ====================================================== -->
+
+    <section
+        class="screen active"
+        id="intro"
+    >
+
+
+        <!-- DECORATIONS -->
+
+        <div class="floating-heart heart-one">
+            ♥
+        </div>
+
+        <div class="floating-heart heart-two">
+            ♡
+        </div>
+
+        <div class="sparkle sparkle-one">
+            ✦
+        </div>
+
+        <div class="sparkle sparkle-two">
+            ✧
+        </div>
+
+
+
+        <div class="hero">
+
+
+            <p class="eyebrow">
+                A LITTLE SURPRISE
+            </p>
+
+
+            <h1>
+
+                Surprising
+                <br>
+
+                <span>her</span> with
+                <br>
+
+                <strong>THIS</strong>
+
+            </h1>
+
+
+            <p class="subtitle">
+
+                Can't wait for her reaction! 🥹
+
+            </p>
+
+
+
+            <!-- =================================================
+                 MAIN PHOTO
+
+                 CHANGE PHOTO HERE:
+
+                 images/main.jpg
+
+                 Example:
+
+                 images/her.jpg
+            ================================================== -->
+
+            <div class="main-photo">
+
+                <img
+                    src="images/main.jpg"
+                    alt="Main Photo"
+                >
+
+            </div>
+
+
+
+            <div class="little-note">
+
+                Because
+                <br>
+
+                <b>
+                    she deserves
+                    <br>
+                    the best!
+                </b>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            class="main-button"
+            onclick="goTo('door')"
+        >
+
+            Let's begin 💗
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCREEN 2
+         MUSEUM DOOR
+    ====================================================== -->
+
+    <section
+        class="screen"
+        id="door"
+    >
+
+
+        <div class="progress">
+
+            01 / 05
+
+        </div>
+
+
+        <p class="section-label">
+
+            CLOSED TO EVERYONE, EXCEPT YOU
+
+        </p>
+
+
+        <h2>
+
+            Ishan built a little
+            <br>
+
+            <span>museum.</span>
+
+        </h2>
+
+
+        <p class="instruction">
+
+            Knock three times to enter ✨
+
+        </p>
+
+
+
+        <button
+            class="museum-door"
+            id="doorButton"
+            onclick="knockDoor()"
+        >
+
+
+            <div class="door-title">
+
+                THE MUSEUM
+
+                <br>
+
+                OF
+
+                <br>
+
+                OUR MOMENTS
+
+            </div>
+
+
+            <div class="door-knob"></div>
+
+
+            <div class="door-heart">
+
+                ♡
+
+            </div>
+
+
+        </button>
+
+
+
+        <p
+            id="knockText"
+            class="small-message"
+        >
+
+            Tap the door 3 times
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCREEN 3
+         PHOTO GALLERY
+    ====================================================== -->
+
+    <section
+        class="screen"
+        id="gallery"
+    >
+
+
+        <div class="progress">
+
+            02 / 05
+
+        </div>
+
+
+        <p class="section-label">
+
+            ROOM 1 • THE GALLERY
+
+        </p>
+
+
+        <h2>
+
+            our
+            <span>photos</span>
+
+        </h2>
+
+
+        <p class="instruction">
+
+            A few moments worth keeping forever. 📸
+
+        </p>
+
+
+
+        <div class="photo-grid">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="photo-frame">
+
+                <img
+                    src="images/photo1.jpg"
+                    alt="Memory 1"
+                >
+
+            </div>
+
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="photo-frame">
+
+                <img
+                    src="images/photo2.jpg"
+                    alt="Memory 2"
+                >
+
+            </div>
+
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="photo-frame">
+
+                <img
+                    src="images/photo3.jpg"
+                    alt="Memory 3"
+                >
+
+            </div>
+
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="photo-frame">
+
+                <img
+                    src="images/photo4.jpg"
+                    alt="Memory 4"
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            class="main-button"
+            onclick="goTo('puzzle')"
+        >
+
+            Next memory →
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCREEN 4
+         PHOTO PUZZLE
+    ====================================================== -->
+
+    <section
+        class="screen"
+        id="puzzle"
+    >
+
+
+        <div class="progress">
+
+            03 / 05
+
+        </div>
+
+
+        <p class="section-label">
+
+            ROOM 2 • THE RESTORATION DESK
+
+        </p>
+
+
+        <h2>
+
+            Put this
+            <span>photo</span>
+            together.
+
+        </h2>
+
+
+        <p class="instruction">
+
+            Tap two pieces to swap them. 💕
+
+        </p>
+
+
+
+        <!-- =================================================
+             PUZZLE BOARD
+
+             THE PHOTO IS DEFINED IN script.js
+
+             const puzzleImage =
+             "images/puzzle.jpg";
+
+        ================================================== -->
+
+        <div
+            class="puzzle"
+            id="puzzleBoard"
+        ></div>
+
+
+
+        <p
+            id="puzzleMessage"
+            class="small-message"
+        >
+
+            Restore the photo.
+
+        </p>
+
+
+
+        <button
+            id="puzzleNext"
+            class="main-button hidden"
+            onclick="goTo('letter')"
+        >
+
+            Photo restored →
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCREEN 5
+         LETTER
+    ====================================================== -->
+
+    <section
+        class="screen"
+        id="letter"
+    >
+
+
+        <div class="progress">
+
+            04 / 05
+
+        </div>
+
+
+        <p class="section-label">
+
+            ROOM 3 • THE READING ROOM
+
+        </p>
+
+
+        <h2>
+
+            Souvik wrote
+            <span>you</span>
+            this.
+
+        </h2>
+
+
+
+        <div class="letter-card">
+
+
+            <p>
+
+                I don't say it enough, but having you
+                in my life is one of my greatest
+                blessings.
+
+            </p>
+
+
+            <p class="signature">
+
+                — Souvik
+
+            </p>
+
+
+        </div>
+
+
+
+        <button
+            class="main-button"
+            onclick="goTo('promise')"
+        >
+
+            One last room →
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCREEN 6
+         PROMISE
+    ====================================================== -->
+
+    <section
+        class="screen"
+        id="promise"
+    >
+
+
+        <div class="progress">
+
+            05 / 05
+
+        </div>
+
+
+        <p class="section-label">
+
+            ROOM 4 • THE PROMISES
+
+        </p>
+
+
+        <h2>
+
+            Tick each promise,
+            <br>
+
+            then
+            <span>sign.</span>
+
+        </h2>
+
+
+
+        <div class="promise-list">
+
+
+            <label>
+
+                <input type="checkbox">
+
+                I'll be there for you when things
+                get difficult.
+
+            </label>
+
+
+            <label>
+
+                <input type="checkbox">
+
+                I won't stop making you smile.
+
+            </label>
+
+
+            <label>
+
+                <input type="checkbox">
+
+                I'll keep every memory safe.
+
+            </label>
+
+
+            <label>
+
+                <input type="checkbox">
+
+                I'll never forget our little moments.
+
+            </label>
+
+
+            <label>
+
+                <input type="checkbox">
+
+                I'll always wish the best for you.
+
+            </label>
+
+
+        </div>
+
+
+
+        <div class="signature-box">
+
+
+            <label>
+
+                Your signature
+
+            </label>
+
+
+            <input
+                type="text"
+                id="signatureInput"
+                placeholder="Type your name..."
+            >
+
+
+        </div>
+
+
+
+        <button
+            class="main-button"
+            onclick="sealPromise()"
+        >
+
+            Seal the promise 💗
+
+        </button>
+
+
+
+        <div
+            class="final-message hidden"
+            id="finalMessage"
+        >
+
+
+            <div class="stamp">
+
+                RENEWED
+
+            </div>
+
+
+            <h3>
+
+                Promise sealed. 🥹
+
+            </h3>
+
+
+            <p>
+
+                Some memories deserve their
+                own little museum.
+
+            </p>
+
+
+            <button
+                class="secondary-button"
+                onclick="location.reload()"
+            >
+
+                Replay ↻
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

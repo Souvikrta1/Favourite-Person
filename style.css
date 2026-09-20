@@ -1,0 +1,999 @@
+/* =========================================================
+   BASIC
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    min-height: 100%;
+
+}
+
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background: #171723;
+
+    color: #201b18;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+
+    width: min(100%, 520px);
+
+    min-height: 100vh;
+
+    background: #fff8e9;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+
+/* =========================================================
+   SCREEN
+========================================================= */
+
+.screen {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 30px 22px 35px;
+
+    position: relative;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.screen.active {
+
+    display: flex;
+
+    animation: fadeIn .45s ease;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.progress {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #a36b55;
+
+    margin-bottom: 28px;
+
+}
+
+
+.section-label {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+
+    color: #bd765d;
+
+    margin: 8px 0;
+
+}
+
+
+h2 {
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 32px;
+
+    line-height: 1.05;
+
+    margin: 8px 0;
+
+}
+
+
+h2 span {
+
+    color: #db3e58;
+
+}
+
+
+.instruction {
+
+    font-size: 13px;
+
+    color: #796e66;
+
+    margin: 0 0 25px;
+
+}
+
+
+.small-message {
+
+    font-size: 12px;
+
+    color: #8c7566;
+
+}
+
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.main-button {
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #ffb72b;
+
+    color: #2d2117;
+
+    font-weight: 700;
+
+    padding: 15px 28px;
+
+    box-shadow: 0 7px 0 #df9220;
+
+    cursor: pointer;
+
+    transition: .15s;
+
+    margin-top: auto;
+
+}
+
+
+.main-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.main-button:active {
+
+    transform: translateY(5px);
+
+    box-shadow: 0 2px 0 #df9220;
+
+}
+
+
+.secondary-button {
+
+    border: 1px solid #d8b89e;
+
+    background: #fff7e8;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#intro {
+
+    justify-content: flex-start;
+
+    padding-top: 24px;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 12%,
+            #ffd6df 0 3px,
+            transparent 4px
+        ),
+
+        radial-gradient(
+            circle at 87% 19%,
+            #ffb72b 0 2px,
+            transparent 3px
+        ),
+
+        #fff8e9;
+
+}
+
+
+.hero {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    margin-top: 18px;
+
+    position: relative;
+
+}
+
+
+.eyebrow {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #c76b71;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 55px;
+
+    line-height: .9;
+
+    margin: 16px 0;
+
+}
+
+
+.hero h1 span {
+
+    color: #ed5272;
+
+}
+
+
+.hero h1 strong {
+
+    font-size: 82px;
+
+    letter-spacing: -4px;
+
+    color: #080707;
+
+}
+
+
+.subtitle {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================================
+   MAIN PHOTO
+========================================================= */
+
+.main-photo {
+
+    width: 225px;
+
+    height: 225px;
+
+    margin: 25px auto 10px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #f1dfc9;
+
+    box-shadow:
+        0 12px 30px rgba(65,38,25,.12);
+
+}
+
+
+.main-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.little-note {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 55px;
+
+    background: white;
+
+    border: 2px dashed #ef7e8e;
+
+    border-radius: 12px;
+
+    padding: 8px;
+
+    font-size: 11px;
+
+    transform: rotate(-5deg);
+
+}
+
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.floating-heart {
+
+    position: absolute;
+
+    color: #ed5272;
+
+    font-size: 42px;
+
+}
+
+
+.heart-one {
+
+    top: 12px;
+
+    left: 24px;
+
+}
+
+
+.heart-two {
+
+    top: 105px;
+
+    right: 18px;
+
+    background: #ffd5dc;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+}
+
+
+.sparkle {
+
+    position: absolute;
+
+    color: #f2a41b;
+
+}
+
+
+.sparkle-one {
+
+    top: 65px;
+
+    right: 35px;
+
+    font-size: 28px;
+
+}
+
+
+.sparkle-two {
+
+    bottom: 170px;
+
+    left: 20px;
+
+}
+
+
+
+/* =========================================================
+   MUSEUM DOOR
+========================================================= */
+
+.museum-door {
+
+    margin: 18px auto 14px;
+
+    width: 235px;
+
+    height: 390px;
+
+    border-radius: 120px 120px 22px 22px;
+
+    border: 12px solid #8b684e;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #154d52,
+            #1c6b6a
+        );
+
+    box-shadow:
+
+        inset 0 0 0 5px #d8b58a,
+
+        0 18px 35px #6d5440;
+
+    position: relative;
+
+    cursor: pointer;
+
+}
+
+
+.museum-door:active {
+
+    transform: scale(.97);
+
+}
+
+
+.door-title {
+
+    position: absolute;
+
+    top: 90px;
+
+    left: 35px;
+
+    right: 35px;
+
+    color: #fff4db;
+
+    font-family: "Fredoka";
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+}
+
+
+.door-knob {
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #e7bb54;
+
+    right: 28px;
+
+    top: 205px;
+
+    box-shadow:
+        0 0 0 4px #bd8c3e;
+
+}
+
+
+.door-heart {
+
+    position: absolute;
+
+    bottom: 48px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 32px;
+
+    color: #f4aab6;
+
+}
+
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+
+    width: 100%;
+
+    max-width: 390px;
+
+}
+
+
+.photo-frame {
+
+    height: 175px;
+
+    background: #f2d9a8;
+
+    border: 7px solid #b67c4f;
+
+    box-shadow:
+        0 12px 30px rgba(65,38,25,.12);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.photo-frame:nth-child(odd) {
+
+    transform: rotate(-1deg);
+
+}
+
+
+.photo-frame:nth-child(even) {
+
+    transform: rotate(1deg);
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* =========================================================
+   PHOTO PUZZLE
+========================================================= */
+
+.puzzle {
+
+    --puzzle-size: 330px;
+
+    width: var(--puzzle-size);
+
+    height: var(--puzzle-size);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-template-rows:
+        repeat(3, 1fr);
+
+    gap: 3px;
+
+    background: #9a6a4b;
+
+    padding: 3px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px rgba(65,38,25,.18);
+
+}
+
+
+.tile {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    cursor: pointer;
+
+    position: relative;
+
+    background-repeat: no-repeat;
+
+    background-size:
+        var(--puzzle-size)
+        var(--puzzle-size);
+
+    background-color: #eee;
+
+    transition:
+        transform .15s ease,
+        filter .15s ease;
+
+}
+
+
+.tile:hover {
+
+    filter: brightness(1.05);
+
+}
+
+
+.tile:active {
+
+    transform: scale(.96);
+
+}
+
+
+.tile.selected {
+
+    outline:
+        4px solid #e84f6b;
+
+    outline-offset: -4px;
+
+    z-index: 5;
+
+}
+
+
+.tile::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter-card {
+
+    width: 100%;
+
+    max-width: 370px;
+
+    background: #fffdf3;
+
+    border: 1px solid #e8d4b6;
+
+    padding: 35px 28px;
+
+    box-shadow:
+        0 12px 30px rgba(65,38,25,.12);
+
+    text-align: left;
+
+    margin: 20px 0 30px;
+
+    transform: rotate(-1deg);
+
+}
+
+
+.letter-card p {
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    line-height: 1.55;
+
+}
+
+
+.letter-card .signature {
+
+    text-align: right;
+
+    font-style: italic;
+
+    color: #a55350;
+
+}
+
+
+
+/* =========================================================
+   PROMISE
+========================================================= */
+
+.promise-list {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    background: white;
+
+    border: 1px solid #ead9bf;
+
+    border-radius: 12px;
+
+    padding: 9px;
+
+    text-align: left;
+
+}
+
+
+.promise-list label {
+
+    display: block;
+
+    padding: 11px 9px;
+
+    border-bottom:
+        1px solid #eee1d0;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+}
+
+
+.promise-list label:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.promise-list input {
+
+    accent-color: #179c84;
+
+    margin-right: 8px;
+
+}
+
+
+.signature-box {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    text-align: left;
+
+    margin: 20px 0;
+
+}
+
+
+.signature-box label {
+
+    font-size: 11px;
+
+    color: #967e6e;
+
+    display: block;
+
+    margin-bottom: 7px;
+
+}
+
+
+.signature-box input {
+
+    width: 100%;
+
+    border: 1px solid #ddbfa4;
+
+    background: #fffaf0;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    outline: none;
+
+}
+
+
+
+/* =========================================================
+   FINAL MESSAGE
+========================================================= */
+
+.final-message {
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    border:
+        2px dashed #e27a7c;
+
+    border-radius: 15px;
+
+    background: #fff5df;
+
+    width: 100%;
+
+}
+
+
+.stamp {
+
+    display: inline-block;
+
+    border:
+        3px solid #d84e61;
+
+    color: #d84e61;
+
+    font-weight: 800;
+
+    padding: 5px 10px;
+
+    transform: rotate(-8deg);
+
+}
+
+
+.final-message h3 {
+
+    font-family: "Fredoka";
+
+    font-size: 25px;
+
+    margin: 10px 5px 5px;
+
+}
+
+
+.final-message p {
+
+    font-size: 13px;
+
+    color: #75675d;
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+
+        font-size: 47px;
+
+    }
+
+
+    .hero h1 strong {
+
+        font-size: 70px;
+
+    }
+
+
+    .puzzle {
+
+        --puzzle-size: 280px;
+
+    }
+
+}
